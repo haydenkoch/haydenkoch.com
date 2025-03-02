@@ -1,4 +1,4 @@
-<div class="grid h-screen place-items-center">
+<div class="grid min-h-screen place-items-center">
     <h1 class="font-bold text-2xl">
         Coming Soon<span class="animate-flash">.</span>
     </h1>

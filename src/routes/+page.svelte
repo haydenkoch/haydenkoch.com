@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<div class="grid h-screen place-items-center">
+    <div class="grid h-screen place-items-center">
+        <h1 class="font-bold text-2xl">
+            Coming Soon<span class="animate-flash">.</span>
+        </h1>
+    </div>
+</div>
+<a href="mailto:hello@haydenkoch.com" class="absolute bottom-2 left-1/2 -translate-x-1/2 text-center text-xs text-gray-500">
+    hello@haydenkoch.com
+</a>

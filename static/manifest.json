@@ -1,0 +1,45 @@
+{
+    "name": "Hayden Koch",
+    "short_name": "HaydenKoch",
+    "description": "Freelance Developer & Marketing Consultant",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#111827",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon.svg",
+        "sizes": "any",
+        "type": "image/svg+xml"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshot-desktop.png",
+        "sizes": "1920x1080",
+        "type": "image/png",
+        "form_factor": "wide"
+      },
+      {
+        "src": "/screenshot-mobile.png",
+        "sizes": "1080x1920",
+        "type": "image/png"
+      }
+    ]
+  }
+  

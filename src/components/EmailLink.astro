@@ -1,0 +1,19 @@
+---
+interface Props {
+  email?: string;
+  class?: string;
+}
+
+const { email = "hello@haydenkoch.com", class: className, ...props } = Astro.props;
+---
+
+<a 
+    href={`mailto:${email}`} 
+    class:list={[
+        "absolute bottom-2 left-1/2 -translate-x-1/2 text-sm text-gray-600 hover:text-gray-900 transition-colors",
+        className
+    ]}
+    {...props}
+>
+    <slot>{email}</slot>
+</a>

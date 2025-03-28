@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://haydenkoch.com/sitemap-index.xml

@@ -1,0 +1,87 @@
+---
+import "../styles/global.css";
+import { SEO } from "astro-seo";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+import EmailLink from "../components/EmailLink.astro";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" class="m-0 w-full h-full">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+    
+        <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+        </GoogleFontsOptimizer>
+        
+        <SEO
+            title="Hayden Koch | Freelance Developer & Marketing Consultant"
+            description="Experienced freelance developer and marketing consultant specializing in web applications and digital marketing solutions."
+            canonical={canonicalURL}
+            openGraph={{
+                basic: {
+                    title: "Hayden Koch | Freelance Developer & Marketing Consultant",
+                    type: "website",
+                    image: "/og-image.jpg",
+                    url: canonicalURL,
+                },
+                optional: {
+                    description: "Experienced freelance developer and marketing consultant specializing in web applications and digital marketing solutions.",
+                    locale: "en_US",
+                    siteName: "Hayden Koch",
+                },
+                image: {
+                    alt: "Hayden Koch - Freelance Developer & Marketing Consultant",
+                }
+            }}
+            twitter={{
+                card: "summary_large_image",
+                creator: "@haydenkoch",
+                title: "Hayden Koch | Freelance Developer & Marketing Consultant",
+                description: "Experienced freelance developer and marketing consultant specializing in web applications and digital marketing solutions.",
+                image: "/og-image.jpg",
+            }}
+            extend={{
+                link: [
+                    { rel: "icon", href: "/favicon.ico" },
+                    { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+                    { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+                    { rel: "manifest", href: "/manifest.json" }
+                ],
+                meta: [
+                    { name: "theme-color", content: "#111827" },
+                    { name: "application-name", content: "Hayden Koch" },
+                    { name: "apple-mobile-web-app-capable", content: "yes" },
+                    { name: "apple-mobile-web-app-status-bar-style", content: "default" },
+                    { name: "apple-mobile-web-app-title", content: "Hayden Koch" },
+                    { name: "keywords", content: "freelance developer, marketing consultant, web development, software engineer, digital marketing, web applications, custom solutions, hayden koch" },
+                    { name: "author", content: "Hayden Koch" },
+                    { name: "format-detection", content: "telephone=no" },
+                    { name: "robots", content: "index, follow" },
+                ],
+            }}
+        />
+        
+        <!-- Schema.org structured data -->
+        <script type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Hayden Koch",
+            "url": "https://haydenkoch.com",
+            "sameAs": [
+                "https://twitter.com/haydenkoch",
+                "https://github.com/haydenkoch",
+            ],
+            "jobTitle": "Freelance Developer & Marketing Consultant",
+            "description": "Experienced freelance developer and marketing consultant specializing in web applications and digital marketing solutions.",
+            "knowsAbout": ["Web Development", "Digital Marketing", "SEO", "Software Engineering"],
+            "image": "https://haydenkoch.com/profile-image.jpeg"
+        })} />
+    </head>
+    <body class="m-0 w-full h-full flex flex-col items-center justify-center bg-gray-100 text-gray-900">
+        <slot />
+		<EmailLink email="hello@haydenkoch.com" />
+    </body>
+</html>
